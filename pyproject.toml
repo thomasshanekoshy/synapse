@@ -1,0 +1,7 @@
+[project]
+name = "synapze"
+version = "0.1.0"
+description = "Local models management layer — guardrails, routing, caching, evals, and token tracking for Ollama."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []

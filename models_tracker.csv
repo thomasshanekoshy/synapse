@@ -1,0 +1,16 @@
+model_id,release_date,primary_function,capabilities,evals_summary,quantization,file_size_gb,vram_required_gb
+qwen3-vl:latest,2025-09-22,vision,"spatial_reasoning, gui_interaction, image_text_interleaved, video_understanding, object_detection","WildVision Elo: ~1200, MathVision: ~55%",Q5_K_M,6.1,10
+granite4:latest,2025-10-01,agentic,"tool_calling, json_mode, efficient_rag, orchestration_routing, strict_instruction_following","Arena Elo: ~1180, LiveCodeBench: ~20%",Q4_K_M,2.1,6
+glm-ocr:latest,2026-02-01,ocr,"table_parsing, formula_extraction, markdown_output, handwriting_recognition, complex_layouts","OmniDocBench: ~80%, OCRBench: ~75%",Q4_K_M,2.2,6
+gemma4:latest,2026-04-02,multimodal,"tool_calling, audio_processing, image_understanding, extreme_long_context, multi_step_reasoning","GPQA Diamond: ~50%, LiveCodeBench: ~45%",Q4_K_M,9.6,14
+deepseek-ocr:latest,2026-01-27,ocr,"contextual_optical_compression, semantic_reading_order, document_vqa, layout_analysis","DocVQA: ~85%, OCRBench: ~78%",Q4_K_M,6.7,11
+deepseek-coder-v2:latest,2026-01-01,coding,"code_generation, code_review, repository_level_understanding, math_reasoning, bug_fixing","LiveCodeBench: ~38%, Arena (Coding): ~1250",Q4_K_M,8.9,13
+lfm2.5-thinking:latest,2026-01-20,reasoning,"on_device_planning, step_by_step_reasoning, low_latency, edge_deployment, logical_deduction","AIME 2024: ~20%, GPQA: ~30%",Q4_K_M,0.7,2
+rnj-1:latest,2025-12-06,agentic,"elite_coding, autonomous_tool_use, environment_interaction, high_performance_orchestration","LiveCodeBench: ~40%, GPQA: ~42%",Q4_K_M,5.1,9
+qwen3.5:9b,2026-03-01,multimodal,"general_chat, foundational_reasoning, multilingual_support, tool_calling, early_fusion","Arena Elo: ~1240, LiveCodeBench: ~35%",Q5_K_M,6.6,11
+xitao/bge-reranker-v2-m3:latest,2024-11-01,reranker,"multilingual_reranking, dense_retrieval_optimization, rag_pipeline","MTEB (Retrieval): ~74%",FP16,1.2,3
+dengcao/Qwen3-Reranker-8B:Q8_0,2025-11-01,reranker,"high_precision_reranking, semantic_similarity, long_context_reranking","BEIR (NDCG@10): ~70%",Q8_0,8.7,12
+snowflake-arctic-embed2:568m,2024-12-04,embedding,"matryoshka_representation, short_text_retrieval, enterprise_search","MTEB (English): ~65%",FP16,1.2,3
+bge-m3:567m,2024-01-30,embedding,"multilingual_embedding, cross_lingual_retrieval, hybrid_search","MTEB (Multilingual): ~62%",FP16,1.2,3
+qwen3-embedding:8b,2025-09-22,embedding,"dense_vector_generation, semantic_search, long_document_embedding","MTEB (Retrieval): ~66%",Q4_K_M,4.7,8
+deepseek-r1:14b,2025-01-20,reasoning,"advanced_math, complex_logic, distilled_reasoning_traces, chain_of_thought, scientific_analysis","AIME 2024: 69.4%, LiveCodeBench: ~55%",Q4_K_M,9.0,14
