@@ -24,6 +24,9 @@ Synapze/
 │       ├── feedback_loop.py        # User feedback logging to SQLite
 │       └── benchmarks.py           # Model and task-based eval logic
 └── Orchestration/                  # Exposes interfaces for CrewAI usage
+├── Tools/                          # Actionable code and FastAPI endpoints
+├── Skills/                         # MD files, System prompts, Agent templates
+└── Workflows/                      # Coordination schemas mapping Tools to Skills
 ```
 
 ## 3. Core Class Specifications
@@ -35,7 +38,7 @@ Responsible for direct communication with the local Ollama API.
 *   **Method `ensure_active(model_id: str)`**: If `model_id != _active_model_id`, unloads `_active_model_id`, then updates the state to the new `model_id`.
 
 ### 3.2 `SynapzeLLM` (CrewAI/Agent Wrapper)
-The public-facing class that agentic frameworks instantiate.
+The public-facing class that agentic frameworks instantiate, functioning concurrently as the primary FastAPI endpoint provider.
 *   **Dependencies**: Requires `OllamaClient`, `DynamicRouter`, `SQLiteManager`, `GuardrailsEngine`.
 *   **Method `invoke(prompt: str, task_type: str = "general", expected_schema: BaseModel = None, session_id: str = None) -> Union[str, dict]`**:
     1.  Runs `GuardrailsEngine.validate_input(prompt)`.

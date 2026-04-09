@@ -7,6 +7,7 @@ Synapze is a foundational local model management and orchestration layer. It act
 
 ### **In Scope**
 *   **Agentic Framework SDK**: Base integration layer (exposing LLM classes conformable to CrewAI/LangChain standards).
+*   **Core Backend Routing**: Incorporating FastAPI definitions out-of-the-box to serve state-management payloads directly to frontend components via `/Core`.
 *   **VRAM Management**: Strict 1-active-model policy. Logic to automatically unload models from Ollama memory when switching models.
 *   **Storage & Caching**: 
     *   SQLite implementation for token tracking, state memory, and exact-match caching.
@@ -22,7 +23,7 @@ Synapze is a foundational local model management and orchestration layer. It act
 ### **Out of Scope**
 *   **Tool Execution & Calling Pipelines**: The execution, definition, and state management of external tools/APIs are a separate project. Synapze *only* guarantees that the LLM's output conforms to the requested tool's JSON schema constraints.
 *   **Heavyweight External Guardrails**: Frameworks like LlamaGuard or NeMo-Guardrails are deferred in favor of fast, custom, lightweight checks.
-*   **UI/Frontend**: No user interface components; pure SDK/Backend.
+*   **UI/Frontend**: No user interface components live in Python. The system routes structured JSON explicitly intended for **React** and Tailwind applications running independently.
 
 ---
 
